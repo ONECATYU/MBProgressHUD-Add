@@ -32,10 +32,10 @@ CGFloat const MBPHUDShowTime = 2.0f;
 }
 
 - (void)showHUD {
-    [self showWithMessage:nil];
+    [self showHUDWithMessage:nil];
 }
 
-- (void)showWithMessage:(nullable NSString *)message {
+- (void)showHUDWithMessage:(nullable NSString *)message {
     MBPHUD_EXECUTE({
         MBProgressHUD *HUD = [weakself instanceHUD];
         [weakself addSubview:HUD];
@@ -45,7 +45,7 @@ CGFloat const MBPHUDShowTime = 2.0f;
     })
 }
 
-- (void)showMessage:(NSString *)message {
+- (void)showHUDMessage:(NSString *)message {
     MBPHUD_EXECUTE({
         MBProgressHUD *HUD = [weakself instanceHUD];
         [weakself addSubview:HUD];
@@ -56,11 +56,11 @@ CGFloat const MBPHUDShowTime = 2.0f;
     })
 }
 
-- (void)showWithImage:(UIImage *)image {
-    [self showWithImage:image message:nil];
+- (void)showHUDWithImage:(UIImage *)image {
+    [self showHUDWithImage:image message:nil];
 }
 
-- (void)showWithImage:(UIImage *)image message:(nullable NSString *)message {
+- (void)showHUDWithImage:(UIImage *)image message:(nullable NSString *)message {
     MBPHUD_EXECUTE({
         MBProgressHUD *HUD = [weakself instanceHUD];
         HUD.mode = MBProgressHUDModeCustomView;
@@ -72,15 +72,15 @@ CGFloat const MBPHUDShowTime = 2.0f;
     })
 }
 
-- (void)showProgressHUD {
-    [self showProgressWithMessage:nil];
+- (void)showHUDProgressHUD {
+    [self showHUDProgressWithMessage:nil];
 }
 
-- (void)showProgressWithMessage:(nullable NSString *)message {
-    [self showProgressWithMessage:message style:MBPHUDProgressStyleNormal];
+- (void)showHUDProgressWithMessage:(nullable NSString *)message {
+    [self showHUDProgressWithMessage:message style:MBPHUDProgressStyleNormal];
 }
 
-- (void)showProgressWithMessage:(nullable NSString *)message style:(MBPHUDProgressStyle)style {
+- (void)showHUDProgressWithMessage:(nullable NSString *)message style:(MBPHUDProgressStyle)style {
     MBPHUD_EXECUTE({
         MBProgressHUDMode mode = MBProgressHUDModeDeterminate;
         if (style == MBPHUDProgressStyleBar) mode = MBProgressHUDModeDeterminateHorizontalBar;

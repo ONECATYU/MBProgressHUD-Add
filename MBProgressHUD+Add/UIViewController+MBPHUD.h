@@ -16,15 +16,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) MBProgressHUD *HUD;
 
 - (void)showHUD;
-- (void)showWithMessage:(nullable NSString *)message;
-- (void)showMessage:(NSString *)message;
+- (void)showHUDWithMessage:(nullable NSString *)message;
+- (void)showHUDMessage:(NSString *)message;
 
-- (void)showWithImage:(UIImage *)image;
-- (void)showWithImage:(UIImage *)image message:(nullable NSString *)message;
+- (void)showHUDWithImage:(UIImage *)image;
+- (void)showHUDWithImage:(UIImage *)image message:(nullable NSString *)message;
 
-- (void)showProgressHUD;
-- (void)showProgressWithMessage:(nullable NSString *)message;
-- (void)showProgressWithMessage:(nullable NSString *)message style:(MBPHUDProgressStyle)style;
+- (void)showHUDProgressHUD;
+- (void)showHUDProgressWithMessage:(nullable NSString *)message;
+- (void)showHUDProgressWithMessage:(nullable NSString *)message style:(MBPHUDProgressStyle)style;
 - (void)updateProgress:(CGFloat)progress;
 
 - (void)hideHUD;

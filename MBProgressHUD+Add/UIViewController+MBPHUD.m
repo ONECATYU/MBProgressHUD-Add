@@ -17,35 +17,35 @@
 }
 
 - (void)showHUD {
-    [self.view showWithMessage:nil];
+    [self.view showHUDWithMessage:nil];
 }
 
-- (void)showWithMessage:(nullable NSString *)message {
-    [self.view showWithMessage:message];
+- (void)showHUDWithMessage:(nullable NSString *)message {
+    [self.view showHUDWithMessage:message];
 }
 
-- (void)showMessage:(NSString *)message {
-    [self.view showMessage:message];
+- (void)showHUDMessage:(NSString *)message {
+    [self.view showHUDMessage:message];
 }
 
-- (void)showWithImage:(UIImage *)image {
-    [self.view showWithImage:image message:nil];
+- (void)showHUDWithImage:(UIImage *)image {
+    [self.view showHUDWithImage:image message:nil];
 }
 
-- (void)showWithImage:(UIImage *)image message:(nullable NSString *)message {
-    [self.view showWithImage:image message:message];
+- (void)showHUDWithImage:(UIImage *)image message:(nullable NSString *)message {
+    [self.view showHUDWithImage:image message:message];
 }
 
-- (void)showProgressHUD {
-    [self.view showProgressWithMessage:nil];
+- (void)showHUDProgressHUD {
+    [self.view showHUDProgressWithMessage:nil];
 }
 
-- (void)showProgressWithMessage:(nullable NSString *)message {
-    [self.view showProgressWithMessage:message style:MBPHUDProgressStyleNormal];
+- (void)showHUDProgressWithMessage:(nullable NSString *)message {
+    [self.view showHUDProgressWithMessage:message style:MBPHUDProgressStyleNormal];
 }
 
-- (void)showProgressWithMessage:(nullable NSString *)message style:(MBPHUDProgressStyle)style {
-    [self.view showProgressWithMessage:message style:style];
+- (void)showHUDProgressWithMessage:(nullable NSString *)message style:(MBPHUDProgressStyle)style {
+    [self.view showHUDProgressWithMessage:message style:style];
 }
 
 - (void)updateProgress:(CGFloat)progress {
