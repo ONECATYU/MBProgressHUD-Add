@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)showHUDProgressHUD;
 - (void)showHUDProgressWithMessage:(nullable NSString *)message;
 - (void)showHUDProgressWithMessage:(nullable NSString *)message style:(MBPHUDProgressStyle)style;
-- (void)updateProgress:(CGFloat)progress;
+- (void)updateHUDProgress:(CGFloat)progress;
 
 - (void)hideHUD;
 - (void)hideHUDCompletion:(nullable void(^)(void))completion;

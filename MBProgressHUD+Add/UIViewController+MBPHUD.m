@@ -48,7 +48,7 @@
     [self.view showHUDProgressWithMessage:message style:style];
 }
 
-- (void)updateProgress:(CGFloat)progress {
+- (void)updateHUDProgress:(CGFloat)progress {
     self.view.HUD.progress = progress;
 }
 

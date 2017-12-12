@@ -93,7 +93,7 @@ CGFloat const MBPHUDShowTime = 2.0f;
     })
 }
 
-- (void)updateProgress:(CGFloat)progress {
+- (void)updateHUDProgress:(CGFloat)progress {
     self.HUD.progress = progress;
 }
 
