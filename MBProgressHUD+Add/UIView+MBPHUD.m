@@ -11,6 +11,7 @@
 #define MBPHUD_EXECUTE(...) \
 __weak typeof(self) weakself = self; \
 [self hideHUDCompletion:^{ \
+[weakself.HUD removeFromSuperview]; \
     __VA_ARGS__ \
 }];
 

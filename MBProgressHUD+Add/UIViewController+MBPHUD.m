@@ -17,7 +17,7 @@
 }
 
 - (void)showHUD {
-    [self.view showHUDWithMessage:nil];
+    [self.view showHUD];
 }
 
 - (void)showHUDWithMessage:(nullable NSString *)message {
@@ -29,7 +29,7 @@
 }
 
 - (void)showHUDWithImage:(UIImage *)image {
-    [self.view showHUDWithImage:image message:nil];
+    [self.view showHUDWithImage:image];
 }
 
 - (void)showHUDWithImage:(UIImage *)image message:(nullable NSString *)message {
@@ -37,11 +37,11 @@
 }
 
 - (void)showHUDProgressHUD {
-    [self.view showHUDProgressWithMessage:nil];
+    [self.view showHUDProgressHUD];
 }
 
 - (void)showHUDProgressWithMessage:(nullable NSString *)message {
-    [self.view showHUDProgressWithMessage:message style:MBPHUDProgressStyleNormal];
+    [self.view showHUDProgressWithMessage:message];
 }
 
 - (void)showHUDProgressWithMessage:(nullable NSString *)message style:(MBPHUDProgressStyle)style {
@@ -49,11 +49,11 @@
 }
 
 - (void)updateHUDProgress:(CGFloat)progress {
-    self.view.HUD.progress = progress;
+    [self.view updateHUDProgress:progress];
 }
 
 - (void)hideHUD {
-    [self.view hideHUDCompletion:nil];
+    [self.view hideHUD];
 }
 
 - (void)hideHUDCompletion:(nullable void(^)(void))completion {
